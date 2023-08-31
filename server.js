@@ -29,7 +29,7 @@ app.use(express.json());
 app.use("/api/products", productsRoute);
 
 // Iniciar el servidor
-const port = process.env.PORT || 3030;
+const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log(`Backend server is running on port ${port}`);
 });
