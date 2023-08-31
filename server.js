@@ -9,7 +9,8 @@ dotenv.config();
 
 // Configuración de CORS para permitir acceso desde tu página web
 app.use(cors({
-  origin: "https://danicameroo.github.io/CatalogoMadagaskar/" // Reemplaza con la URL de tu página web
+  origin: 'https://danicameroo.github.io/',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }));
 
 // Conexión a la base de datos
