@@ -7,6 +7,11 @@ const cors = require('cors');
 app.use(cors());
 
 dotenv.config();
+
+app.use(cors({
+  origin: "https://danicameroo.github.io/CatalogoMadagaskar/" // Reemplaza con la URL de tu página web
+}));
+
 mongoose
     .connect(process.env.MONGO_URL)
     .then(()=>console.log("DBconnnection succesfull!"))
