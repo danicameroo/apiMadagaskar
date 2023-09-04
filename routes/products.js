@@ -47,7 +47,7 @@ router.get("/find/:id", async (req,res)=>{
     }
 });
 
-//GET PRODUCT BY TITLE
+//GET PRODUCT BY TITL
 router.get("/find/:title", async (req,res)=>{
     try{
         const product = await Product.findByTitle(req.params.title);
