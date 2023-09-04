@@ -37,10 +37,20 @@ router.delete("/:id", async (req,res)=>{
     }
 });
 
-//GET PRODUCT
+//GET PRODUCT BY ID
 router.get("/find/:id", async (req,res)=>{
     try{
         const product = await Product.findById(req.params.id);
+        res.status(200).json(product);
+    }catch(err){
+        res.status(500).json(err);
+    }
+});
+
+//GET PRODUCT BY TITLE
+router.get("/find/:title", async (req,res)=>{
+    try{
+        const product = await Product.findByTitle(req.params.title);
         res.status(200).json(product);
     }catch(err){
         res.status(500).json(err);
